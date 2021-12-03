@@ -26,6 +26,9 @@ client.on("message", async (message) => {
       case "greet":
         greetings(message);
         break;
+      case "pagi":
+        pagi(message);
+        break;
     }
     // if (CMD_NAME === "kick") {
     //   kickMember(message, args);
@@ -63,5 +66,8 @@ async function banUser(message, args) {
 }
 function greetings(message) {
   message.reply(`Welcome to the ${message.guild.name}`);
+}
+function pagi(message){
+  message.reply(`Selamat pagi juga Sayang:* ${message.sender}`);
 }
 client.login(process.env.DISCORDJS_BOT_TOKEN);
